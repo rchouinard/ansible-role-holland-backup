@@ -1,4 +1,4 @@
-# Ansible Role: MySQL Community Server
+# Ansible Role: Holland Backup Manager
 
 Installs the Holland Backup Manager for RHEL/CentOS and Fedora.
 
