@@ -1,0 +1,15 @@
+---
+- name: Install Holland Backup
+  package:
+    name: holland-mysqldump
+    state: present
+
+- name: Install Holland configuration
+  template:
+    dest: /etc/holland/holland.conf
+    src: holland.conf.j2
+
+- name: Install Holland mysqldump configuration
+  template:
+    dest: /etc/holland/providers/mysqldump.conf
+    src: mysqldump.conf.j2

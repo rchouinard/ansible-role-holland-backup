@@ -1,0 +1,31 @@
+[mysqldump]
+
+mysql-binpath       = {{ holland_mysqldump_holland_mysqldump_mysql_binpath }}
+lock-method         = {{ holland_mysqldump_lock_method }}
+databases           = {{ holland_mysqldump_databases }}
+exclude-databases   = {{ holland_mysqldump_exclude_databases }}
+tables              = {{ holland_mysqldump_tables }}
+exclude-tables      = {{ holland_mysqldump_exclude_tables }}
+dump-routines       = {{ holland_mysqldump_dump_routines }}
+dump-events         = {{ holland_mysqldump_dump_events }}
+stop-slave          = {{ holland_mysqldump_stop_slave }}
+bin-log-position    = {{ holland_mysqldump_bin_log_position }}
+flush-logs          = {{ holland_mysqldump_flush_logs }}
+file-per-database   = {{ holland_mysqldump_file_per_database }}
+additional-options  = {{ holland_mysqldump_additional_options }}
+
+[compression]
+
+method              = {{ holland_mysqldump_compression_method }}
+inline              = {{ holland_mysqldump_compression_inline }}
+level               = {{ holland_mysqldump_compression_level }}
+bin-path            = {{ holland_mysqldump_compression_bin_path }}
+
+[mysql:client]
+
+defaults-extra-file  = {{ holland_mysqldump_client_defaults_extra_file }}
+#user                = {{ holland_mysqldump_client_user }}
+#password            = {{ holland_mysqldump_client_password }}
+#socket              = {{ holland_mysqldump_client_socket }}
+#host                = {{ holland_mysqldump_client_host }}
+#port                = {{ holland_mysqldump_client_port }}
